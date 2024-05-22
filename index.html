@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
+  <title>StreamSpeech: Simultaneous Speech-to-Speech Translation with Multi-task Learning</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -52,21 +52,26 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title"><strong>StreamSpeech</strong>: Simultaneous Speech-to-Speech Translation with Multi-task Learning</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="https://zhangshaolei1998.github.io/" target="_blank">Shaolei Zhang</a><sup>1,2</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="https://fangqingkai.github.io/" target="_blank">Qingkai Fang</a><sup>1,2</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                  <a href="https://scholar.google.com.hk/citations?user=XwHtPyAAAAAJ&hl" target="_blank">Shoutao Guo</a><sup>1,2</sup>,</span>
+                  <span class="author-block">
+                  <a href="https://scholar.google.com.hk/citations?user=dUgq6tEAAAAJ" target="_blank">Zhengrui Ma</a><sup>1,2</sup>,</span>
+                  <span class="author-block">
+                  <a href="https://scholar.google.com.hk/citations?user=CncXH-YAAAAJ" target="_blank">Min Zhang</a><sup>3</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://people.ucas.edu.cn/~yangfeng?language=en" target="_blank">Yang Feng</a><sup>1,2,*</sup>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block"><sup>1</sup>Key Laboratory of Intelligent Information Processing, Institute of Computing Technology, Chinese Academy of Sciences (ICT/CAS)<br><sup>2</sup>University of Chinese Academy of Sciences<br><sup>3</sup>School of Future Science and Engineering, Soochow University<br><font color="red">ACL 2024</font></span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -82,17 +87,6 @@
                       </a>
                     </span>
 
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
                   <!-- Github link -->
                   <span class="link-block">
                     <a href="https://github.com/YOUR REPO HERE" target="_blank"
@@ -104,16 +98,12 @@
                   </a>
                 </span>
 
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+              <div class="single-image-display has-text-centered">
+              <p>
+                <br>
+                <img src="meta/images/ill.png" alt="MY ALT TEXT" style="width: 80%;"/>
+              </p>
+            </div>
             </div>
           </div>
         </div>
@@ -123,23 +113,6 @@
 </section>
 
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -148,7 +121,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Simultaneous speech-to-speech translation (Simul-S2ST) outputs target speech while receiving streaming speech inputs, which is critical for real-time communication. Beyond accomplishing translation between speech, Simul-S2ST requires a policy to control the model to generate corresponding target speech at the opportune moment within speech inputs, thereby posing a double challenge of translation and policy. In this paper, we propose StreamSpeech, a direct Simul-S2ST model that jointly learns translation and simultaneous policy in a unified framework of multi-task learning. By leveraging multi-task learning across speech recognition, speech-to-text translation, and speech synthesis, StreamSpeech effectively identifies the opportune moment to start translating and subsequently generates the corresponding target speech. Experimental results demonstrate that StreamSpeech achieves state-of-the-art performance in both offline S2ST and Simul-S2ST tasks. Owing to the multitask learning, StreamSpeech is able to present intermediate results (i.e., ASR or translation results) during simultaneous translation process, offering a more comprehensive translation experience.
           </p>
         </div>
       </div>
@@ -158,109 +131,1055 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
+
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Introducing StreamSpeech</h2>
+        <div class="content has-text-justified">
+          <p>
+            <strong>StreamSpeech</strong> employs two-pass architecture that first converts source speech into target text hidden states (autoregressive speech-to-text translation, AR-S2TT) and then generates target speech. The source/target/unit CTC decoders are introduced to learn alignments between speech/text via multiple tasks of speech recognition (ASR), non-autoregressive speech-to-text translation (NAR-S2TT) and speech-to-unit translation (S2UT), accordingly guide StreamSpeech to make decisions of outputing speech or waiting for streaming inputs.
+            <br>
+            <br>
+            🎈<strong>Highlight</strong>:<br>
+            1. StreamSpeech achieves <font color="red">state-of-the-art performance on both offline and simultaneous speech-to-speech translation</font>.<br>
+            2. StreamSpeech can present <font color="blue">intermediate results (i.e., ASR or translation results)</font> during simultaneous translation, offering a more comprehensive low-latency communication experience.<br>
+            3. Each component of StreamSpeech can be used independently for <font color="green">streaming ASR or read-time TTS</font>.
+          </p>
+          <center>
+            <img src="meta/images/model.png" width="100%">
+          </center>
+        </div>
   </div>
-</div>
-</div>
 </section>
-<!-- End image carousel -->
 
 
 
-
-<!-- Youtube video -->
+<!-- Audio carousel -->
 <section class="hero is-small is-light">
   <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <div class="container ">
+      <h2 class="title has-text-centered">🎧 Listen to StreamSpeech 🎧</h2>
+      <div class="field is-horizontal is-centered">
+        <div class="field-label is-normal">
+          <label class="label">Select Audio</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <div class="select">
+                <select id="audioSelect" onchange="showAudioDetails()">
+                  <option value="audio1">French-to-English: common_voice_fr_17301936.mp3</option>
+                  <option value="audio2">French-to-English: common_voice_fr_17767732.mp3</option>
+                  <option value="audio3">French-to-English: common_voice_fr_17319835.mp3</option>
+                  <option value="audio4">French-to-English: common_voice_fr_19458925.mp3</option>
+                  <option value="audio5">Spanish-to-English: common_voice_es_19759842.mp3</option>
+                  <option value="audio6">Spanish-to-English: common_voice_es_19716154.mp3</option>
+                  <option value="audio7">German-to-English: common_voice_de_19153338.mp3</option>
+                  <option value="audio8">German-to-English: common_voice_de_19155145.mp3</option>
+                </select>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
+      <div id="audioDetails">
+        <div id="audio1" class="audio-row box">
+          <h3 class="title is-4">French-to-English: common_voice_fr_17301936.mp3</h3>
+          <div class="content">
+            <table class="tg">
+              <tbody>
+                <tr>
+                  <td class="tg-0lax"><strong>Speech Inputs</strong></td>
+                  <td class="tg-0lax" colspan="5">
+                    <audio controls>
+                      <source src="meta/audio/common_voice_fr_17301936.source.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax" rowspan="3"><strong>Ground Truth</strong></td>
+                  <td class="tg-0lax">Transcription:</td>
+                  <td class="tg-0lax" colspan="4">jai donc lexpérience des années passées jen dirai un mot tout à lheure</td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax">Translation:</td>
+                  <td class="tg-0lax" colspan="4">i therefore have the experience of the passed years i'll say a few words about that later</td>
+                </tr>
+                <tr>
+                   <td class="tg-0lax">Target Speech:</td>
+                  <td class="tg-0lax" colspan="4">
+                    <audio controls>
+                      <source src="meta/audio/common_voice_fr_17301936.ref.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax" colspan="2"><strong>Tasks</strong></td>
+                  <td class="tg-baqh"><strong>ASR</strong></td>
+                  <td class="tg-baqh"><strong>S2TT</strong></td>
+                  <td class="tg-baqh"><strong>S2ST (output)</strong></td>
+                  <td class="tg-baqh"><strong>S2ST (multi-channel)</strong><br><i>left: inputs</i> | <i>right: outputs</i></td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax" rowspan="2"><strong>Offline</strong></td>
+                  <td class="tg-0lax">UnitY</td>
+                  <td class="tg-baqh">N/A</td>
+                  <td class="tg-baqh">so i have the experience of years passed i'll tell a word later</td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/offline.unity.common_voice_fr_17301936.target.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/offline.unity.common_voice_fr_17301936.merge.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax"><font color="red">StreamSpeech</font></td>
+                  <td class="tg-baqh">jai donc lexpérience des années passé jen dirairai un mot tout à lheure</td>
+                  <td class="tg-baqh">so i have the experience in the past years i'll say a word later</td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/offline.streamspeech.common_voice_fr_17301936.target.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/offline.streamspeech.common_voice_fr_17301936.merge.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax" rowspan="2"><strong>Simultaneous</strong></td>
+                  <td class="tg-0lax">Wait-k (k=3)</td>
+                  <td class="tg-baqh">N/A</td>
+                  <td class="tg-baqh">the therefore i have the experience of past years i will tell you a word later</td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/waitk.common_voice_fr_17301936.target.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/waitk.common_voice_fr_17301936.merge.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax"><font color="red">StreamSpeech<br>(chunk=320ms)</font></td>
+                  <td class="tg-baqh">jai donc expérience des années passé jen dirairai un mot tout à lheure</td>
+                  <td class="tg-baqh">i therefore have an experience of last years i will tell a word later</td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/streamspeech.common_voice_fr_17301936.target.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/streamspeech.common_voice_fr_17301936.merge.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
 
+        <div id="audio2" class="audio-row box" style="display:none;">
+          <h3 class="title is-4">French-to-English: common_voice_fr_17767732.mp3</h3>
+          <div class="content">
+            <table class="tg">
+              <tbody>
+                <tr>
+                  <td class="tg-0lax"><strong>Speech Inputs</strong></td>
+                  <td class="tg-0lax" colspan="5">
+                    <audio controls>
+                      <source src="meta/audio/common_voice_fr_17767732.source.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax" rowspan="3"><strong>Ground Truth</strong></td>
+                  <td class="tg-0lax">Transcription:</td>
+                  <td class="tg-0lax" colspan="4">je voulais soumettre cette idée à la réflexion de lassemblée nationale</td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax">Translation:</td>
+                  <td class="tg-0lax" colspan="4">i wanted to submit this idea for the national assembly to think about it</td>
+                </tr>
+                <tr>
+                   <td class="tg-0lax">Target Speech:</td>
+                  <td class="tg-0lax" colspan="4">
+                    <audio controls>
+                      <source src="meta/audio/common_voice_fr_17767732.ref.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax" colspan="2"><strong>Tasks</strong></td>
+                  <td class="tg-baqh"><strong>ASR</strong></td>
+                  <td class="tg-baqh"><strong>S2TT</strong></td>
+                  <td class="tg-baqh"><strong>S2ST (output)</strong></td>
+                  <td class="tg-baqh"><strong>S2ST (multi-channel)</strong><br><i>left: inputs</i> | <i>right: outputs</i></td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax" rowspan="2"><strong>Offline</strong></td>
+                  <td class="tg-0lax">UnitY</td>
+                  <td class="tg-baqh">N/A</td>
+                  <td class="tg-baqh">i would like to submit this idea to the reflection of the national assembly</td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/offline.unity.common_voice_fr_17767732.target.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/offline.unity.common_voice_fr_17767732.merge.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax"><font color="red">StreamSpeech</font></td>
+                  <td class="tg-baqh">je voudrais soumettre cette idée à la réflexion de lassemblée nationale</td>
+                  <td class="tg-baqh">i would like to submit this idea to the national assembly's reflection</td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/offline.streamspeech.common_voice_fr_17767732.target.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/offline.streamspeech.common_voice_fr_17767732.merge.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax" rowspan="2"><strong>Simultaneous</strong></td>
+                  <td class="tg-0lax">Wait-k (k=3)</td>
+                  <td class="tg-baqh">N/A</td>
+                  <td class="tg-baqh">i would like to underline this idea to think of the national assembly</td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/waitk.common_voice_fr_17767732.target.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/waitk.common_voice_fr_17767732.merge.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax"><font color="red">StreamSpeech<br>(chunk=320ms)</font></td>
+                  <td class="tg-baqh">je voudrais soumettre cette idée à la réflexion de lassemblée nationale</td>
+                  <td class="tg-baqh">i would like to submit this idea to the reflection of the national assembly</td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/streamspeech.common_voice_fr_17767732.target.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/streamspeech.common_voice_fr_17767732.merge.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
+        <div id="audio3" class="audio-row box" style="display:none;">
+          <h3 class="title is-4">French-to-English: common_voice_fr_17319835.mp3</h3>
+          <div class="content">
+            <table class="tg">
+              <tbody>
+                <tr>
+                  <td class="tg-0lax"><strong>Speech Inputs</strong></td>
+                  <td class="tg-0lax" colspan="5">
+                    <audio controls>
+                      <source src="meta/audio/common_voice_fr_17319835.source.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax" rowspan="3"><strong>Ground Truth</strong></td>
+                  <td class="tg-0lax">Transcription:</td>
+                  <td class="tg-0lax" colspan="4">ensuite ces structures répondent à la demande dune partie des usagers et des professionnels</td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax">Translation:</td>
+                  <td class="tg-0lax" colspan="4">secondly these structures respond to the demand of some users and professionals</td>
+                </tr>
+                <tr>
+                   <td class="tg-0lax">Target Speech:</td>
+                  <td class="tg-0lax" colspan="4">
+                    <audio controls>
+                      <source src="meta/audio/common_voice_fr_17319835.ref.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax" colspan="2"><strong>Tasks</strong></td>
+                  <td class="tg-baqh"><strong>ASR</strong></td>
+                  <td class="tg-baqh"><strong>S2TT</strong></td>
+                  <td class="tg-baqh"><strong>S2ST (output)</strong></td>
+                  <td class="tg-baqh"><strong>S2ST (multi-channel)</strong><br><i>left: inputs</i> | <i>right: outputs</i></td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax" rowspan="2"><strong>Offline</strong></td>
+                  <td class="tg-0lax">UnitY</td>
+                  <td class="tg-baqh">N/A</td>
+                  <td class="tg-baqh">then these structures answer in the request of some users and professionals</td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/offline.unity.common_voice_fr_17319835.target.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/offline.unity.common_voice_fr_17319835.merge.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax"><font color="red">StreamSpeech</font></td>
+                  <td class="tg-baqh">ensuite ces structures répondentnt à la demande dune partie des usagers et des professionnels</td>
+                  <td class="tg-baqh">then these structures meet the request of one of the users and professionals</td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/offline.streamspeech.common_voice_fr_17319835.target.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/offline.streamspeech.common_voice_fr_17319835.merge.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax" rowspan="2"><strong>Simultaneous</strong></td>
+                  <td class="tg-0lax">Wait-k (k=3)</td>
+                  <td class="tg-baqh">N/A</td>
+                  <td class="tg-baqh">then his structures answer the request of part of the users and professionals</td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/waitk.common_voice_fr_17319835.target.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/waitk.common_voice_fr_17319835.merge.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax"><font color="red">StreamSpeech<br>(chunk=320ms)</font></td>
+                  <td class="tg-baqh">elle est ensuite ses structures répondent à la demande dune partie des usagers et des professionnels</td>
+                  <td class="tg-baqh">she then became its answer structures to the request of part of the users and professionals</td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/streamspeech.common_voice_fr_17319835.target.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/streamspeech.common_voice_fr_17319835.merge.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
+
+        <div id="audio4" class="audio-row box" style="display:none;">
+          <h3 class="title is-4">French-to-English: common_voice_fr_19458925.mp3</h3>
+          <div class="content">
+            <table class="tg">
+              <tbody>
+                <tr>
+                  <td class="tg-0lax"><strong>Speech Inputs</strong></td>
+                  <td class="tg-0lax" colspan="5">
+                    <audio controls>
+                      <source src="meta/audio/common_voice_fr_19458925.source.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax" rowspan="3"><strong>Ground Truth</strong></td>
+                  <td class="tg-0lax">Transcription:</td>
+                  <td class="tg-0lax" colspan="4">trois ans plus tard il reprend ses études</td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax">Translation:</td>
+                  <td class="tg-0lax" colspan="4">he went back to school three years later</td>
+                </tr>
+                <tr>
+                   <td class="tg-0lax">Target Speech:</td>
+                  <td class="tg-0lax" colspan="4">
+                    <audio controls>
+                      <source src="meta/audio/common_voice_fr_19458925.ref.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax" colspan="2"><strong>Tasks</strong></td>
+                  <td class="tg-baqh"><strong>ASR</strong></td>
+                  <td class="tg-baqh"><strong>S2TT</strong></td>
+                  <td class="tg-baqh"><strong>S2ST (output)</strong></td>
+                  <td class="tg-baqh"><strong>S2ST (multi-channel)</strong><br><i>left: inputs</i> | <i>right: outputs</i></td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax" rowspan="2"><strong>Offline</strong></td>
+                  <td class="tg-0lax">UnitY</td>
+                  <td class="tg-baqh">N/A</td>
+                  <td class="tg-baqh">three years later he resumed his studies</td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/offline.unity.common_voice_fr_19458925.target.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/offline.unity.common_voice_fr_19458925.merge.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax"><font color="red">StreamSpeech</font></td>
+                  <td class="tg-baqh">trois ans plus tard il reprend ses études</td>
+                  <td class="tg-baqh">he resumed his studies three years later</td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/offline.streamspeech.common_voice_fr_19458925.target.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/offline.streamspeech.common_voice_fr_19458925.merge.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax" rowspan="2"><strong>Simultaneous</strong></td>
+                  <td class="tg-0lax">Wait-k (k=3)</td>
+                  <td class="tg-baqh">N/A</td>
+                  <td class="tg-baqh">three years later he regained his studies</td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/waitk.common_voice_fr_19458925.target.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/waitk.common_voice_fr_19458925.merge.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax"><font color="red">StreamSpeech<br>(chunk=320ms)</font></td>
+                  <td class="tg-baqh">trois ans plus tard il reprend ses études</td>
+                  <td class="tg-baqh">three years later he resumed his studies</td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/streamspeech.common_voice_fr_19458925.target.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/streamspeech.common_voice_fr_19458925.merge.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
+
+        <div id="audio5" class="audio-row box" style="display:none;">
+          <h3 class="title is-4">Spanish-to-English: common_voice_es_19759842.mp3</h3>
+          <div class="content">
+            <table class="tg">
+              <tbody>
+                <tr>
+                  <td class="tg-0lax"><strong>Speech Inputs</strong></td>
+                  <td class="tg-0lax" colspan="5">
+                    <audio controls>
+                      <source src="meta/audio/common_voice_es_19759842.source.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax" rowspan="3"><strong>Ground Truth</strong></td>
+                  <td class="tg-0lax">Transcription:</td>
+                  <td class="tg-0lax" colspan="4">es considerado el mayor mercado financiero del mundo</td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax">Translation:</td>
+                  <td class="tg-0lax" colspan="4">it's considered the biggest financial market in the world</td>
+                </tr>
+                <tr>
+                   <td class="tg-0lax">Target Speech:</td>
+                  <td class="tg-0lax" colspan="4">
+                    <audio controls>
+                      <source src="meta/audio/common_voice_es_19759842.ref.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax" colspan="2"><strong>Tasks</strong></td>
+                  <td class="tg-baqh"><strong>ASR</strong></td>
+                  <td class="tg-baqh"><strong>S2TT</strong></td>
+                  <td class="tg-baqh"><strong>S2ST (output)</strong></td>
+                  <td class="tg-baqh"><strong>S2ST (multi-channel)</strong><br><i>left: inputs</i> | <i>right: outputs</i></td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax" rowspan="2"><strong>Offline</strong></td>
+                  <td class="tg-0lax">UnitY</td>
+                  <td class="tg-baqh">N/A</td>
+                  <td class="tg-baqh">it is considered the greatest financial market in the world</td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/offline.unity.common_voice_es_19759842.target.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/offline.unity.common_voice_es_19759842.merge.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax"><font color="red">StreamSpeech</font></td>
+                  <td class="tg-baqh">es considerada del mayor mercadodo financiera del mundo</td>
+                  <td class="tg-baqh">it is considered to be the largest financial market in the world</td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/offline.streamspeech.common_voice_es_19759842.target.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/offline.streamspeech.common_voice_es_19759842.merge.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax" rowspan="2"><strong>Simultaneous</strong></td>
+                  <td class="tg-0lax">Wait-k (k=3)</td>
+                  <td class="tg-baqh">N/A</td>
+                  <td class="tg-baqh">the cloth is considered the biggest financial market in the world</td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/waitk.common_voice_es_19759842.target.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/waitk.common_voice_es_19759842.merge.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax"><font color="red">StreamSpeech<br>(chunk=320ms)</font></td>
+                  <td class="tg-baqh">es considerado el mayor mercado financiero del mundo</td>
+                  <td class="tg-baqh">it is considered to be the most financial market of the world</td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/streamspeech.common_voice_es_19759842.target.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/streamspeech.common_voice_es_19759842.merge.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
+
+        <div id="audio6" class="audio-row box" style="display:none;">
+          <h3 class="title is-4">Spanish-to-English: common_voice_es_19716154.mp3</h3>
+          <div class="content">
+            <table class="tg">
+              <tbody>
+                <tr>
+                  <td class="tg-0lax"><strong>Speech Inputs</strong></td>
+                  <td class="tg-0lax" colspan="5">
+                    <audio controls>
+                      <source src="meta/audio/common_voice_es_19716154.source.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax" rowspan="3"><strong>Ground Truth</strong></td>
+                  <td class="tg-0lax">Transcription:</td>
+                  <td class="tg-0lax" colspan="4">es uno de los personajes más reconocidos y más importantes de la historia costarricense</td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax">Translation:</td>
+                  <td class="tg-0lax" colspan="4">they are one of the most famous and important figures in costa rican history</td>
+                </tr>
+                <tr>
+                   <td class="tg-0lax">Target Speech:</td>
+                  <td class="tg-0lax" colspan="4">
+                    <audio controls>
+                      <source src="meta/audio/common_voice_es_19716154.ref.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax" colspan="2"><strong>Tasks</strong></td>
+                  <td class="tg-baqh"><strong>ASR</strong></td>
+                  <td class="tg-baqh"><strong>S2TT</strong></td>
+                  <td class="tg-baqh"><strong>S2ST (output)</strong></td>
+                  <td class="tg-baqh"><strong>S2ST (multi-channel)</strong><br><i>left: inputs</i> | <i>right: outputs</i></td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax" rowspan="2"><strong>Offline</strong></td>
+                  <td class="tg-0lax">UnitY</td>
+                  <td class="tg-baqh">N/A</td>
+                  <td class="tg-baqh">one of the most known and most important characters in costa rican history</td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/offline.unity.common_voice_es_19716154.target.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/offline.unity.common_voice_es_19716154.merge.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax"><font color="red">StreamSpeech</font></td>
+                  <td class="tg-baqh">uno de los personajes más reconocidos y más importantes de la historia costarricense</td>
+                  <td class="tg-baqh">one of the most important and most important characters in costa rican history</td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/offline.streamspeech.common_voice_es_19716154.target.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/offline.streamspeech.common_voice_es_19716154.merge.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax" rowspan="2"><strong>Simultaneous</strong></td>
+                  <td class="tg-0lax">Wait-k (k=3)</td>
+                  <td class="tg-baqh">N/A</td>
+                  <td class="tg-baqh">one of the most famous and most important characters in costa rican history</td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/waitk.common_voice_es_19716154.target.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/waitk.common_voice_es_19716154.merge.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax"><font color="red">StreamSpeech<br>(chunk=320ms)</font></td>
+                  <td class="tg-baqh">uno de los personajes más reconocidos y más importantes de la historia costarricense</td>
+                  <td class="tg-baqh">one of the most famous and most important characters in costa rica's history</td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/streamspeech.common_voice_es_19716154.target.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/streamspeech.common_voice_es_19716154.merge.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="audio7" class="audio-row box" style="display:none;">
+          <h3 class="title is-4">German-to-English: common_voice_de_19153338.mp3</h3>
+          <div class="content">
+            <table class="tg">
+              <tbody>
+                <tr>
+                  <td class="tg-0lax"><strong>Speech Inputs</strong></td>
+                  <td class="tg-0lax" colspan="5">
+                    <audio controls>
+                      <source src="meta/audio/common_voice_de_19153338.source.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax" rowspan="3"><strong>Ground Truth</strong></td>
+                  <td class="tg-0lax">Transcription:</td>
+                  <td class="tg-0lax" colspan="4">er ist auch vorsitzender des teams</td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax">Translation:</td>
+                  <td class="tg-0lax" colspan="4">he is also the chairman of the team</td>
+                </tr>
+                <tr>
+                   <td class="tg-0lax">Target Speech:</td>
+                  <td class="tg-0lax" colspan="4">
+                    <audio controls>
+                      <source src="meta/audio/common_voice_de_19153338.ref.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax" colspan="2"><strong>Tasks</strong></td>
+                  <td class="tg-baqh"><strong>ASR</strong></td>
+                  <td class="tg-baqh"><strong>S2TT</strong></td>
+                  <td class="tg-baqh"><strong>S2ST (output)</strong></td>
+                  <td class="tg-baqh"><strong>S2ST (multi-channel)</strong><br><i>left: inputs</i> | <i>right: outputs</i></td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax" rowspan="2"><strong>Offline</strong></td>
+                  <td class="tg-0lax">UnitY</td>
+                  <td class="tg-baqh">N/A</td>
+                  <td class="tg-baqh">he is also chairman of the team</td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/offline.unity.common_voice_de_19153338.target.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/offline.unity.common_voice_de_19153338.merge.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax"><font color="red">StreamSpeech</font></td>
+                  <td class="tg-baqh">er ist auch vorsitzender des teams</td>
+                  <td class="tg-baqh">he is also chairman of the team</td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/offline.streamspeech.common_voice_de_19153338.target.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/offline.streamspeech.common_voice_de_19153338.merge.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax" rowspan="2"><strong>Simultaneous</strong></td>
+                  <td class="tg-0lax">Wait-k (k=3)</td>
+                  <td class="tg-baqh">N/A</td>
+                  <td class="tg-baqh">wrongly it also is chairman of the team</td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/waitk.common_voice_de_19153338.target.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/waitk.common_voice_de_19153338.merge.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax"><font color="red">StreamSpeech<br>(chunk=320ms)</font></td>
+                  <td class="tg-baqh">er ist auch vorsitzender des teams</td>
+                  <td class="tg-baqh">he is also the chairman of the team</td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/streamspeech.common_voice_de_19153338.target.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/streamspeech.common_voice_de_19153338.merge.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="audio8" class="audio-row box" style="display:none;">
+          <h3 class="title is-4">German-to-English: common_voice_de_19155145.mp3</h3>
+          <div class="content">
+            <table class="tg">
+              <tbody>
+                <tr>
+                  <td class="tg-0lax"><strong>Speech Inputs</strong></td>
+                  <td class="tg-0lax" colspan="5">
+                    <audio controls>
+                      <source src="meta/audio/common_voice_de_19155145.source.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax" rowspan="3"><strong>Ground Truth</strong></td>
+                  <td class="tg-0lax">Transcription:</td>
+                  <td class="tg-0lax" colspan="4">er wuchs in maschhad auf und begann dort seine ausbildung</td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax">Translation:</td>
+                  <td class="tg-0lax" colspan="4">he grew up in maschhad and started his training there</td>
+                </tr>
+                <tr>
+                   <td class="tg-0lax">Target Speech:</td>
+                  <td class="tg-0lax" colspan="4">
+                    <audio controls>
+                      <source src="meta/audio/common_voice_de_19155145.ref.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax" colspan="2"><strong>Tasks</strong></td>
+                  <td class="tg-baqh"><strong>ASR</strong></td>
+                  <td class="tg-baqh"><strong>S2TT</strong></td>
+                  <td class="tg-baqh"><strong>S2ST (output)</strong></td>
+                  <td class="tg-baqh"><strong>S2ST (multi-channel)</strong><br><i>left: inputs</i> | <i>right: outputs</i></td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax" rowspan="2"><strong>Offline</strong></td>
+                  <td class="tg-0lax">UnitY</td>
+                  <td class="tg-baqh">N/A</td>
+                  <td class="tg-baqh">he grew up in marshad and completed his training there</td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/offline.unity.common_voice_de_19155145.target.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/offline.unity.common_voice_de_19155145.merge.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax"><font color="red">StreamSpeech</font></td>
+                  <td class="tg-baqh">er wuchs in maschhat auf und begann dort seine ausbildung</td>
+                  <td class="tg-baqh">he grew up in maschad and began his training</td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/offline.streamspeech.common_voice_de_19155145.target.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/offline.streamspeech.common_voice_de_19155145.merge.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax" rowspan="2"><strong>Simultaneous</strong></td>
+                  <td class="tg-0lax">Wait-k (k=3)</td>
+                  <td class="tg-baqh">N/A</td>
+                  <td class="tg-baqh">tess worship in mashet and muss begin his training</td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/waitk.common_voice_de_19155145.target.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/waitk.common_voice_de_19155145.merge.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tg-0lax"><font color="red">StreamSpeech<br>(chunk=320ms)</font></td>
+                  <td class="tg-baqh">er wuchs in maard auf und begann dort seine ausbildung</td>
+                  <td class="tg-baqh">he grew up in maschad and began his training there</td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/streamspeech.common_voice_de_19155145.target.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td class="tg-baqh">
+                    <audio controls>
+                      <source src="meta/audio/streamspeech.common_voice_de_19155145.merge.wav" type="audio/wav">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
 </section>
-<!-- End video carousel -->
+
+<script>
+  function showAudioDetails() {
+    var selectedValue = document.getElementById('audioSelect').value;
+    var audioRows = document.getElementsByClassName('audio-row');
+
+    for (var i = 0; i < audioRows.length; i++) {
+      audioRows[i].style.display = 'none';
+    }
+
+    document.getElementById(selectedValue).style.display = 'block';
+  }
+</script>
+<!-- Audio carousel -->
 
 
+<!-- 
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">🎗StreamSpeech Performance🎗</h2>
+        <div class="content has-text-justified">
+          <p>
+            <strong>1. Offline speech-to-speech translation on CVSS-C benchmark</strong>
+          </p>
+          <center>
+          <img src="meta/images/offline_s2st.png" alt="MY ALT TEXT" style="width: 100%;"/>
+          </center>
+          <br><br><br>
+          <p>
+            <strong>2. Simultaneous speech-to-speech translation on CVSS-C benchmark</strong>
+          </p>
+          <center>
+          <img src="meta/images/simul_s2st.png" alt="MY ALT TEXT" style="width: 100%;"/>
+          </center>
+          <br><br><br>
+          <p>
+            <strong>3. Performance on auxiliary tasks: Streaming ASR & Simultaneous Speech-to-Text Translation</strong>
+          </p>
+          <center>
+          <img src="meta/images/asr.png" alt="MY ALT TEXT" style="width: 50%;"/><img src="meta/images/s2tt.png" alt="MY ALT TEXT" style="width: 50%;"/>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
 
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">🎗StreamSpeech Performance🎗</h2>
+        <div class="content has-text-justified">
+          <p>
+            <strong>1. Offline speech-to-speech translation on CVSS-C benchmark</strong>
+          </p>
+          <center>
+          <img src="meta/images/offline_s2st.png" alt="MY ALT TEXT" style="width: 100%;"/>
+          </center>
+          <br><br><br>
+          <p>
+            <strong>2. Simultaneous speech-to-speech translation on CVSS-C benchmark</strong>
+          </p>
+          <center>
+          <img src="meta/images/simul_s2st.png" alt="MY ALT TEXT" style="width: 100%;"/>
+          </center>
+          <br><br><br>
+          <p>
+            <strong>3. Performance on auxiliary tasks: Streaming ASR & Simultaneous Speech-to-Text Translation</strong>
+          </p>
+          <center>
+          <img src="meta/images/asr.png" alt="MY ALT TEXT" style="width: 55%;"/><img src="meta/images/s2tt.png" alt="MY ALT TEXT" style="width: 45%;"/>
+          </center>
+        </div>
+  </div>
+</section>
 
 
 
 <!-- Paper poster -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <h2 class="title">Poster</h2>
@@ -270,7 +1189,7 @@
         
       </div>
     </div>
-  </section>
+  </section> -->
 <!--End paper poster -->
 
 
@@ -278,7 +1197,18 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>@inproceedings{streamspeech,
+    title = "StreamSpeech: Simultaneous Speech-to-Speech Translation with Multi-task Learning",
+    author = "Zhang, Shaolei  and
+      Fang, Qingkai  and
+      Guo, Shoutao  and
+      Ma, Zhengrui  and
+      Zhang, Min  and
+      Feng, Yang",
+    booktitle = "Proceedings of the 62th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    year = "2024",
+    publisher = "Association for Computational Linguistics",
+}</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
@@ -291,9 +1221,7 @@
         <div class="content">
 
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+            StreamSpeech: Simultaneous Speech-to-Speech Translation with Multi-task Learning
           </p>
 
         </div>
