@@ -89,12 +89,23 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/ictnlp/StreamSpeech" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
                     <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                    <a href="https://huggingface.co/ICTNLP/StreamSpeech_Models/tree/main" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        🤗
+                    </span>
+                    <span>Model</span>
                   </a>
                 </span>
 
@@ -121,7 +132,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Simultaneous speech-to-speech translation (Simul-S2ST) outputs target speech while receiving streaming speech inputs, which is critical for real-time communication. Beyond accomplishing translation between speech, Simul-S2ST requires a policy to control the model to generate corresponding target speech at the opportune moment within speech inputs, thereby posing a double challenge of translation and policy. In this paper, we propose StreamSpeech, a direct Simul-S2ST model that jointly learns translation and simultaneous policy in a unified framework of multi-task learning. By leveraging multi-task learning across speech recognition, speech-to-text translation, and speech synthesis, StreamSpeech effectively identifies the opportune moment to start translating and subsequently generates the corresponding target speech. Experimental results demonstrate that StreamSpeech achieves state-of-the-art performance in both offline S2ST and Simul-S2ST tasks. Owing to the multitask learning, StreamSpeech is able to present intermediate results (i.e., ASR or translation results) during simultaneous translation process, offering a more comprehensive translation experience.
+            Simultaneous speech-to-speech translation (Simul-S2ST, a.k.a streaming speech translation) outputs target speech while receiving streaming speech inputs, which is critical for real-time communication. Beyond accomplishing translation between speech, Simul-S2ST requires a policy to control the model to generate corresponding target speech at the opportune moment within speech inputs, thereby posing a double challenge of translation and policy. In this paper, we propose StreamSpeech, a direct Simul-S2ST model that jointly learns translation and simultaneous policy in a unified framework of multi-task learning. StreamSpeech is an “All in One” seamless streaming model for speech recognition, speech translation and speech synthesis, which can effectively identifies the opportune moment to start translating within the streaming speech inputs. Experiments on CVSS benchmark demonstrate that StreamSpeech achieves state-of-the-art performance in both offline S2ST and Simul-S2ST tasks. Besides, StreamSpeech is able to present high-quality intermediate results (i.e., ASR or translation results) during simultaneous translation process, offering a more comprehensive real-time communication experience.
           </p>
         </div>
       </div>
@@ -1170,14 +1181,14 @@
             <strong>3. Performance on Streaming ASR</strong>
           </p>
           <center>
-          <img src="meta/images/asr.png" alt="MY ALT TEXT" style="width: 55%;"/>
+          <img src="meta/images/asr.png" alt="MY ALT TEXT" style="width: 50%;"/>
           </center>
           <br><br><br>
           <p>
             <strong>4. Performance on Simultaneous Speech-to-Text Translation</strong>
           </p>
           <center>
-          <img src="meta/images/s2tt.png" alt="MY ALT TEXT" style="width: 50%;"/>
+          <img src="meta/images/s2tt.png" alt="MY ALT TEXT" style="width: 55%;"/>
           </center>
         </div>
   </div>
