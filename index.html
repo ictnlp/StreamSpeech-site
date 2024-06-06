@@ -78,7 +78,7 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://arxiv.org/pdf/2406.03049" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -148,7 +148,8 @@
         <h2 class="title is-3 has-text-centered">Introducing StreamSpeech</h2>
         <div class="content has-text-justified">
           <p>
-            <strong>StreamSpeech</strong> employs two-pass architecture that first converts source speech into target text hidden states (autoregressive speech-to-text translation, AR-S2TT) and then generates target speech. The source/target/unit CTC decoders are introduced to learn alignments between speech/text via multiple tasks of speech recognition (ASR), non-autoregressive speech-to-text translation (NAR-S2TT) and speech-to-unit translation (S2UT), accordingly guide StreamSpeech to make decisions of outputing speech or waiting for streaming inputs.
+            <strong>StreamSpeech</strong> is an “All in One” seamless model for offline and simultaneous speech recognition, speech translation and speech synthesis.<br>
+            StreamSpeech employs two-pass architecture that first converts source speech into target text hidden states (autoregressive speech-to-text translation, AR-S2TT) and then generates target speech via non-autoregressive text-to-unit generation. The source/target/unit CTC decoders are introduced to learn alignments via multiple tasks of speech recognition (ASR), non-autoregressive speech-to-text translation (NAR-S2TT) and speech-to-unit translation (S2UT), accordingly guiding StreamSpeech when to start recognizing, translating and synthesizing.
             <br>
             <br>
             🎈<strong>Highlight</strong>:<br>
@@ -1219,17 +1220,12 @@
         If you have any questions, please contact  <a href="https://zhangshaolei1998.github.io/" target="_blank">Shaolei Zhang</a> (zhangshaolei20z@ict.ac.cn).
     </p>
       <pre><code>@inproceedings{streamspeech,
-    title = "StreamSpeech: Simultaneous Speech-to-Speech Translation with Multi-task Learning",
-    author = "Zhang, Shaolei  and
-      Fang, Qingkai  and
-      Guo, Shoutao  and
-      Ma, Zhengrui  and
-      Zhang, Min  and
-      Feng, Yang",
-    booktitle = "Proceedings of the 62th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
-    year = "2024",
-    publisher = "Association for Computational Linguistics",
-}</code></pre>
+        title={StreamSpeech: Simultaneous Speech-to-Speech Translation with Multi-task Learning}, 
+        author={Shaolei Zhang and Qingkai Fang and Shoutao Guo and Zhengrui Ma and Min Zhang and Yang Feng},
+        year={2024},
+        booktitle = {Proceedings of the 62th Annual Meeting of the Association for Computational Linguistics (Long Papers)},
+        publisher = {Association for Computational Linguistics}
+  }</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
